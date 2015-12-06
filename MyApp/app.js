@@ -1,5 +1,9 @@
 var app = angular.module('MyApp', [
 	'home',
+	'login',
+	
+	'resources.login',
+	
 	'ngRoute'
 ]);
 
