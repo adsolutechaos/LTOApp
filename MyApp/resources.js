@@ -1,7 +1,7 @@
 angular.module('resources.login', ['ngResource']).factory('LoginUser', ['$resource', function($resource){
-	var resource = $resource('/LTOApp/rest/UserService/:action',
+	var resource = $resource('/LTOApp/rest/registration/:action',
 		{action:'@action'},
-		{retrieve: {method: 'GET', params: {action:'users'}}}
+		{retrieve: {method: 'POST', params: {action:'insert'}}}
 	);
 	
 	return {

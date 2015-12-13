@@ -6,7 +6,8 @@ loginModule.controller('LoginCtrl',['$rootScope', '$scope', 'LoginUser',
 		$scope.password = null;
 		
 		$scope.submit = function(){
-			LoginUser.retrieve({username:$scope.username});
+			var user = { firstName: $scope.username};
+			LoginUser.retrieve(user);
 		};
 }]);
 
